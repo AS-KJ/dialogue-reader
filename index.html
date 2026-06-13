@@ -29,6 +29,7 @@
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
     color:var(--ink); font-family:"Newsreader",Georgia,serif; line-height:1.6;
     -webkit-text-size-adjust:100%;
+    width:100%; overflow-x:hidden; overflow-x:clip;
   }
 
   /* brand title (text only, no logo) */
@@ -66,6 +67,15 @@
   .toc-btn svg{width:14px;height:14px;}
   .back{height:34px;padding:0 12px 0 8px;font-size:14px;gap:4px;}
   .back svg{width:16px;height:16px;}
+  .bar > *{min-width:0;}
+  @media (max-width:420px){
+    .bar{gap:7px;padding:9px 10px;}
+    .back .lbl,.toc-btn .lbl{display:none;}
+    .back{padding:0 10px;gap:0;}
+    .toc-btn{padding:0 10px;gap:0;}
+    .ep{display:none;}
+    .fz{width:32px;height:32px;}
+  }
 
   /* list screen */
   .home-hero{text-align:center;padding:40px 18px 24px;max-width:680px;margin:0 auto;}
@@ -154,7 +164,7 @@
     <div class="bar">
       <button class="ui back" id="backBtn" aria-label="Back to list">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-        List
+        <span class="lbl">List</span>
       </button>
       <span class="ep" id="readerEp"></span>
       <span class="spacer"></span>
@@ -163,7 +173,7 @@
         <button class="ui fz" id="fzUp" aria-label="Increase text size"><span class="big">A</span>+</button>
         <button class="ui toc-btn" id="tocOpen" aria-label="Scenes">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-          Scenes
+          <span class="lbl">Scenes</span>
         </button>
       </div>
     </div>
