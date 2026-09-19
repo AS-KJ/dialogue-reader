@@ -139,6 +139,24 @@
   .toc-item .n{font-family:"Fraunces",serif;font-weight:700;font-size:11px;color:var(--accent);letter-spacing:.1em;display:block;margin-bottom:2px;}
   .toc-item:active{background:var(--paper-2);}
   .toc-item.active{background:var(--paper-2);border-left-color:var(--accent);}
+
+  /* study modes */
+  .viewtabs{display:flex;gap:4px;background:var(--paper-2);border:1px solid var(--rule);border-radius:999px;padding:3px;margin:0 auto 22px;width:max-content;max-width:100%;}
+  .vtab{font-family:"Fraunces",serif;font-weight:600;font-size:13px;padding:7px 15px;border:none;background:none;color:var(--ink-soft);border-radius:999px;cursor:pointer;white-space:nowrap;}
+  .vtab.on{background:var(--paper);color:var(--accent);box-shadow:0 1px 3px rgba(40,32,22,.14);}
+  .ck{border-bottom:1px solid var(--rule);padding-bottom:1px;}
+  .pz{color:var(--accent);font-weight:700;margin:0 .3em;}
+  .pz1{opacity:.5;font-weight:600;}
+  .pz2{opacity:.9;}
+  .hl{background:linear-gradient(transparent 62%, rgba(200,100,42,.30) 0);padding:0 1px;border-radius:1px;}
+  .pat-intro{font-size:13px;color:var(--ink-soft);font-style:italic;margin:0 2px 18px;line-height:1.55;}
+  .pat{border:1px solid var(--rule);border-radius:12px;padding:13px 14px;margin:0 0 12px;background:#fbf4e6;}
+  .pat-form{font-family:"Fraunces",serif;font-weight:700;font-size:calc(16px * var(--reader-scale));color:var(--ink);margin-bottom:3px;line-height:1.3;}
+  .pat-jp{font-size:calc(13.5px * var(--reader-scale));color:var(--ink-soft);margin-bottom:10px;}
+  .pat-line{font-size:calc(14px * var(--reader-scale));line-height:1.5;margin-top:5px;}
+  .pat-line .q{font-style:italic;color:var(--ink);}
+  .l2{display:inline-block;font-family:"Fraunces",serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-right:8px;}
+  .l2b{color:var(--c-phoebe);}
 </style>
 </head>
 <body>
@@ -569,33 +587,37 @@ const SCRIPT = [
 ];
 // M&A Talk Podcast — speaker-separated transcript (separate series)
 const MA1_SCRIPT = [
-  {"type": "line", "who": "Narrator", "k": "narrator", "text": "Welcome to M&A Talk, the number one podcast on all things related to mergers and acquisitions. Brought to you by Morgan & Westfield, a nationwide leader in mergers and acquisitions for small to mid-market companies. We bring you exclusive interviews with industry experts in business sales, valuation, private equity, investment banking, and more. It's our mission to provide you with insight and guidance on how to build your company's bottom line and maximize value for eventual sales."},
+  {"type": "section", "text": "Opening & guest introduction"},
+  {"type": "line", "who": "Narrator", "k": "narrator", "text": "Welcome to M&A Talk, the number one podcast on all things related to mergers and acquisitions. Brought to you by Morgan & Westfield, a nationwide leader in mergers and acquisitions for small to mid-market companies. We bring you exclusive interviews with industry experts in business sales, valuation, private equity, investment banking, and more. It's our mission to provide you with insight and guidance on how to build your company's bottom line and maximize value for eventual sales.", "c": "Welcome to M&A Talk, | the number one podcast on all things related to mergers and acquisitions. ‖ Brought to you by Morgan & Westfield, | a nationwide leader in mergers and acquisitions for small to mid-market companies. ‖ We bring you exclusive interviews with industry experts | in business sales, valuation, private equity, investment banking, and more. ‖ It's our mission to provide you with insight and guidance | on how to build your company's bottom line | and maximize value for eventual sales."},
   {"type": "line", "who": "Narrator", "k": "narrator", "text": "Here's your host, Jacob."},
-  {"type": "line", "who": "Jacob", "k": "host", "text": "Welcome to M&A Talk. My name is Jacob, president of Morgan and Westfield and your host of M&A Talk. And today we have Luana Helsinger of Itafos in Los Angeles, California, joining us on the show. Luana is a corporate development professional at Itafos with over 10 years of experience in M&A, capital raising, equity research, and equity trading with a focus on Latin American and U.S. markets. Prior to joining Itafos, Luana worked as an equity research associate at Raymond James covering international and US oil and gas companies. Luana is an MBA candidate at UCLA Anderson in California and holds a master's in financial economics and a bachelor of arts in economics. Luana, it's great to have you on the show. Tell me a little bit, first of all, what does Itafos do?"},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "Itafos, it's a portfolio company held by a private equity out of Minneapolis. The private equity name is Castle Lake, and that the business is focused on mining rights and phosphorus, so we manufacture fertilizer."},
+  {"type": "line", "who": "Jacob", "k": "host", "text": "Welcome to M&A Talk. My name is Jacob, president of Morgan and Westfield and your host of M&A Talk. And today we have Luana Helsinger of Itafos in Los Angeles, California, joining us on the show. Luana is a corporate development professional at Itafos with over 10 years of experience in M&A, capital raising, equity research, and equity trading with a focus on Latin American and U.S. markets. Prior to joining Itafos, Luana worked as an equity research associate at Raymond James covering international and US oil and gas companies. Luana is an MBA candidate at UCLA Anderson in California and holds a master's in financial economics and a bachelor of arts in economics. Luana, it's great to have you on the show. Tell me a little bit, first of all, what does Itafos do?", "c": "Welcome to M&A Talk. ‖ My name is Jacob, | president of Morgan and Westfield | and your host of M&A Talk. ‖ And today we have Luana Helsinger of Itafos | in Los Angeles, California, | joining us on the show. ‖ Luana is a corporate development professional at Itafos | with over 10 years of experience in M&A, capital raising, equity research, and equity trading | with a focus on Latin American and U.S. markets. ‖ Prior to joining Itafos, | Luana worked as an equity research associate at Raymond James | covering international and US oil and gas companies. ‖ Luana is an MBA candidate at UCLA Anderson in California | and holds a master's in financial economics and a bachelor of arts in economics. ‖ Luana, it's great to have you on the show. ‖ Tell me a little bit, first of all, | what does Itafos do?"},
+  {"type": "section", "text": "What Itafos does: phosphorus & fertilizer"},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "Itafos, it's a portfolio company held by a private equity out of Minneapolis. The private equity name is Castle Lake, and that the business is focused on mining rights and phosphorus, so we manufacture fertilizer.", "c": "Itafos, | it's a portfolio company held by a private equity out of Minneapolis. ‖ The private equity name is Castle Lake, | and that the business is focused on mining rights and phosphorus, | so we manufacture fertilizer."},
   {"type": "line", "who": "Jacob", "k": "host", "text": "So they're a PE firm, essentially?"},
   {"type": "line", "who": "Luana", "k": "guest", "text": "Yes."},
-  {"type": "line", "who": "Jacob", "k": "host", "text": "And back up again, because I think a lot of people might not have caught that. What is their specialty again?"},
+  {"type": "line", "who": "Jacob", "k": "host", "text": "And back up again, because I think a lot of people might not have caught that. What is their specialty again?", "c": "And back up again, | because I think a lot of people might not have caught that. ‖ What is their specialty again?"},
   {"type": "line", "who": "Jacob", "k": "host", "text": "Mining and gas and what do they do?"},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "Yeah, so the specialty is having phosphorus mining rights all over the world. And with phosphorus, we manufacture fertilizer."},
-  {"type": "line", "who": "Jacob", "k": "host", "text": "So when you say rights, what form does that come in? Is that a licensing type arrangement or what?"},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "Yes, yes. So depending on the country that you have natural resources, sometimes you have rights, sometimes you have leasy agreements."},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "But in a very short answer is usually you have mining rights with the government to be able to explore natural resources such as phosphorus."},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "Yeah, so the specialty is having phosphorus mining rights all over the world. And with phosphorus, we manufacture fertilizer.", "c": "Yeah, | so the specialty is having phosphorus mining rights all over the world. ‖ And with phosphorus, | we manufacture fertilizer."},
+  {"type": "line", "who": "Jacob", "k": "host", "text": "So when you say rights, what form does that come in? Is that a licensing type arrangement or what?", "c": "So when you say rights, | what form does that come in? ‖ Is that a licensing type arrangement | or what?"},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "Yes, yes. So depending on the country that you have natural resources, sometimes you have rights, sometimes you have leasy agreements.", "c": "Yes, yes. ‖ So depending on the country | that you have natural resources, | sometimes you have rights, | sometimes you have leasy agreements."},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "But in a very short answer is usually you have mining rights with the government to be able to explore natural resources such as phosphorus.", "c": "But in a very short answer | is usually you have mining rights with the government | to be able to explore natural resources | such as phosphorus."},
   {"type": "line", "who": "Jacob", "k": "host", "text": "And again, what do you do with the phosphorus fertilizer?"},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "Yes, phosphorus is one of the main fertilizer for crops, essentially soybeans and corn."},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "Yes, phosphorus is one of the main fertilizer for crops, essentially soybeans and corn.", "c": "Yes, | phosphorus is one of the main fertilizer for crops, | essentially soybeans and corn."},
   {"type": "line", "who": "Jacob", "k": "host", "text": "Soybeans and corn, wonderful. Two foods I don't like."},
-  {"type": "line", "who": "Jacob", "k": "host", "text": "Soy supposedly is not good for that. I just told my cook that the other day and she gave me a dirty look. Tell me a little bit more about your background. What has been your core specialty? Actually, before we go into that, I know you're originally from Brazil. You've got a German name. Tell us a little bit about your background so the listeners know the behind the scenes of this conversation."},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "Absolutely. Yes, my name is Luana Helsinger. So there is Luana, that it's a very Brazilian name. Helsinger, very German name. I was born in Rio de Janeiro, Brazil. And my family, actually, my father's side of the family is Jewish and arrived in Brazil during the Second World War. That's how I inherited my last name. In terms of career backgrounds. I have an undergrad in economics, then I did a master's in finance, all of this in Brazil. Then I moved to the US in 2014. I moved to Texas and joined an equity research company called Raymond James. And after a little bit of time in Raymond James, I moved to Itafos, my current role as a corporate development manager. So I focus on the M&A strategy of the company, the growth opportunities, capital raise, financing. And I'm currently living in California, Los Angeles, doing my MBA at UCLA."},
+  {"type": "section", "text": "Luana's background & career path"},
+  {"type": "line", "who": "Jacob", "k": "host", "text": "Soy supposedly is not good for that. I just told my cook that the other day and she gave me a dirty look. Tell me a little bit more about your background. What has been your core specialty? Actually, before we go into that, I know you're originally from Brazil. You've got a German name. Tell us a little bit about your background so the listeners know the behind the scenes of this conversation.", "c": "Soy supposedly is not good for that. ‖ I just told my cook that the other day | and she gave me a dirty look. ‖ Tell me a little bit more about your background. ‖ What has been your core specialty? ‖ Actually, before we go into that, | I know you're originally from Brazil. ‖ You've got a German name. ‖ Tell us a little bit about your background | so the listeners know the behind the scenes of this conversation."},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "Absolutely. Yes, my name is Luana Helsinger. So there is Luana, that it's a very Brazilian name. Helsinger, very German name. I was born in Rio de Janeiro, Brazil. And my family, actually, my father's side of the family is Jewish and arrived in Brazil during the Second World War. That's how I inherited my last name. In terms of career backgrounds. I have an undergrad in economics, then I did a master's in finance, all of this in Brazil. Then I moved to the US in 2014. I moved to Texas and joined an equity research company called Raymond James. And after a little bit of time in Raymond James, I moved to Itafos, my current role as a corporate development manager. So I focus on the M&A strategy of the company, the growth opportunities, capital raise, financing. And I'm currently living in California, Los Angeles, doing my MBA at UCLA.", "c": "Absolutely. ‖ Yes, my name is Luana Helsinger. ‖ So there is Luana, | that it's a very Brazilian name. ‖ Helsinger, | very German name. ‖ I was born in Rio de Janeiro, Brazil. ‖ And my family, actually, | my father's side of the family is Jewish | and arrived in Brazil during the Second World War. ‖ That's how I inherited my last name. ‖ In terms of career backgrounds. ‖ I have an undergrad in economics, | then I did a master's in finance, | all of this in Brazil. ‖ Then I moved to the US in 2014. ‖ I moved to Texas | and joined an equity research company called Raymond James. ‖ And after a little bit of time in Raymond James, | I moved to Itafos, | my current role as a corporate development manager. ‖ So I focus on the M&A strategy of the company, | the growth opportunities, capital raise, financing. ‖ And I'm currently living in California, Los Angeles, | doing my MBA at UCLA."},
   {"type": "line", "who": "Jacob", "k": "host", "text": "Wonderful. What was the culture shock from Brazil to gunslinging Texas like?"},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "I think maybe the culture shock came more from them than from me. I have been going, had me visiting the US for years."},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "But given that my German descendency, I think whenever I was introducing myself, hi, I'm Luana Helsinger, and they would all be sometimes very confused. Are you from Brazil? I said, yeah, I am from Brazil. And the second portion of it, my main shock was to see how Texas, most of them, not everyone, of course, knew very little about South America. And a good example was I met some folks who thought Buenos Aires, which is the capital of Argentina, thought Buenos Aires was the capital of Brazil."},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "I think maybe the culture shock came more from them than from me. I have been going, had me visiting the US for years.", "c": "I think maybe the culture shock came more from them than from me. ‖ I have been going, | had me visiting the US for years."},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "But given that my German descendency, I think whenever I was introducing myself, hi, I'm Luana Helsinger, and they would all be sometimes very confused. Are you from Brazil? I said, yeah, I am from Brazil. And the second portion of it, my main shock was to see how Texas, most of them, not everyone, of course, knew very little about South America. And a good example was I met some folks who thought Buenos Aires, which is the capital of Argentina, thought Buenos Aires was the capital of Brazil.", "c": "But given that my German descendency, | I think whenever I was introducing myself, | hi, I'm Luana Helsinger, | and they would all be sometimes very confused. ‖ Are you from Brazil? ‖ I said, yeah, I am from Brazil. ‖ And the second portion of it, | my main shock was to see how Texas, | most of them, not everyone, of course, | knew very little about South America. ‖ And a good example was | I met some folks who thought Buenos Aires, | which is the capital of Argentina, | thought Buenos Aires was the capital of Brazil."},
   {"type": "line", "who": "Jacob", "k": "host", "text": "Oh, Lord."},
   {"type": "line", "who": "Luana", "k": "guest", "text": "Yes, I had to go through that."},
-  {"type": "line", "who": "Jacob", "k": "host", "text": "They need some help. And a map. So what is your core expertise? If I'm looking at your LinkedIn profile, you've got a pretty diverse background."},
-  {"type": "line", "who": "Jacob", "k": "host", "text": "I hate to use the elevator pitch, but if you've got 10, 20, 30 seconds to explain the essence of what you do, what do you typically tell people what you do for a living?"},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "Absolutely. So I started my career as a research, which encompasses trying to find the fair value of public traded companies, which then encompasses valuation, a lot of forecasting of cash flows. After equity research, I transitioned, it was a natural transition to corporate developments, which is you're still trying to forecast these cash flows, but at this time, more to actually perform a merger and acquisition and even internally for your own company budgets. So I think my main expertise is to try my best to be very accurate in forecasting cash flows and to do a fair valuation of companies or assets or projects."},
-  {"type": "line", "who": "Jacob", "k": "host", "text": "What is the essence of equity research? What are you doing on a daily basis? And what is the job description or kind of the outcome of that type of role?"},
-  {"type": "line", "who": "Luana", "k": "guest", "text": "Sure. So the essence of equity research is you are assigned a sector. In my case, I was assigned at the oil and gas sector, which means I was covering Exxon, Chevron, Marathon."},
+  {"type": "line", "who": "Jacob", "k": "host", "text": "They need some help. And a map. So what is your core expertise? If I'm looking at your LinkedIn profile, you've got a pretty diverse background.", "c": "They need some help. ‖ And a map. ‖ So what is your core expertise? ‖ If I'm looking at your LinkedIn profile, | you've got a pretty diverse background."},
+  {"type": "line", "who": "Jacob", "k": "host", "text": "I hate to use the elevator pitch, but if you've got 10, 20, 30 seconds to explain the essence of what you do, what do you typically tell people what you do for a living?", "c": "I hate to use the elevator pitch, | but if you've got 10, 20, 30 seconds to explain the essence of what you do, | what do you typically tell people | what you do for a living?"},
+  {"type": "section", "text": "Inside equity research"},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "Absolutely. So I started my career as a research, which encompasses trying to find the fair value of public traded companies, which then encompasses valuation, a lot of forecasting of cash flows. After equity research, I transitioned, it was a natural transition to corporate developments, which is you're still trying to forecast these cash flows, but at this time, more to actually perform a merger and acquisition and even internally for your own company budgets. So I think my main expertise is to try my best to be very accurate in forecasting cash flows and to do a fair valuation of companies or assets or projects.", "c": "Absolutely. ‖ So I started my career as a research, | which encompasses trying to find the fair value of public traded companies, | which then encompasses valuation, | a lot of forecasting of cash flows. ‖ After equity research, I transitioned, | it was a natural transition to corporate developments, | which is you're still trying to forecast these cash flows, | but at this time, | more to actually perform a merger and acquisition | and even internally for your own company budgets. ‖ So I think my main expertise is | to try my best to be very accurate in forecasting cash flows | and to do a fair valuation of companies or assets or projects."},
+  {"type": "line", "who": "Jacob", "k": "host", "text": "What is the essence of equity research? What are you doing on a daily basis? And what is the job description or kind of the outcome of that type of role?", "c": "What is the essence of equity research? ‖ What are you doing on a daily basis? ‖ And what is the job description | or kind of the outcome of that type of role?"},
+  {"type": "line", "who": "Luana", "k": "guest", "text": "Sure. So the essence of equity research is you are assigned a sector. In my case, I was assigned at the oil and gas sector, which means I was covering Exxon, Chevron, Marathon.", "c": "Sure. ‖ So the essence of equity research is | you are assigned a sector. ‖ In my case, | I was assigned at the oil and gas sector, | which means I was covering Exxon, Chevron, Marathon."},
   {"type": "line", "who": "Luana", "k": "guest", "text": "And with these names, you have to develop a financial model. And in the financial model, you have income statements, you have a cash flow statement, you have a balance sheet, and you use actuals provided by companies. All the public traded companies have a website called Investor Relations. Investor Relations of Chevron, Investor Relations of Exxon. After gathering all of these actuals, you start really doing a deep dive on on what is next for these companies. And I think that's why it's called equity research. A lot of research goes in so you can try to do the best forecast possible on the direction of this company. So with that, that involves a lot of calls with the investor relations manager of these companies, involves a lot of. management interaction with these companies. Back at my days at Raymond James, I was happy enough to be able to have a conversation with Rex Tillerson, which at the time was the CEO of Exxon. It was a very nice conversation. And you really try to get the nuances, right? Because a company will never tell you exactly what they are expecting. I think they always try to outline more the optimistic story. So you need to be able to kind of gauge a little bit of, okay, is this a realistic scenario? Should I assign a probability for this scenario? And after gathering all of this, in a future indications that the company's providing to you and going into a lot of conferences to really learn of what's happening in the sector in the case of oil and gas, oil prices are very important. So you also have to have a very close look in the macroeconomic of the world. You put all of this in an Excel spreadsheet and you come to your free cashflow and perform evaluation. After you do that, you divide that number by the amount of shares the company has issued and see, well, after doing this, bringing all this cashflow to present value, I think this company worth $50 per share. Then you look at this stock being traded and let's say if the stock is at $30, the equity research will write a research report saying, we recommend this stock to be a part of your portfolio. It's a buy, given that future cash flows would reflect into $50 share price instead. And currently the company's trading at 30."},
   {"type": "line", "who": "Luana", "k": "guest", "text": "And the opposite can happen, right? So like the share price can be at 50, but when you bring all this cash flows to present value, you see that the company is actually at $30 per price. So it would be a sell. So the equity research is doing this on a daily basis with their assigned group of companies, usually in the same sector, and trying to help hedge funds, asset management, individual investors to build their portfolio."},
   {"type": "line", "who": "Jacob", "k": "host", "text": "How many stocks were you covering?"},
@@ -608,6 +630,7 @@ const MA1_SCRIPT = [
   {"type": "line", "who": "Luana", "k": "guest", "text": "Mainly, I think one connects to the other, but market cap."},
   {"type": "line", "who": "Jacob", "k": "host", "text": "What market cap would you start to get into the range of a small cap stock?"},
   {"type": "line", "who": "Luana", "k": "guest", "text": "Small cap, it would fall around like anything, $100 million below can be already considered a small cap stock."},
+  {"type": "section", "text": "Why it matters: owners, IPOs & bankers"},
   {"type": "line", "who": "Jacob", "k": "host", "text": "I've got lots and lots of questions. Just personally, I'm very curious about this because our company, Morgan and Westfield operating in the lower middle market, most of those companies are private. So I think for business owners listening to this show or their advisors who mainly work in the private markets, what relevance would you say that this conversation is going to have to them? So we're really, we're talking about publicly held companies here, of course, but why do you think it'd be helpful for them to know how this world operates?"},
   {"type": "line", "who": "Luana", "k": "guest", "text": "Sure, that's a great question. And I think at least two-fold it. I think one, for all the private owners of companies, it would be extremely helpful for them to build a relationship with an equity research analyst. The reason being, imagine an equity research is 24/7, looking at the sector, having conversations with other equity research analysts, having conversations with the management of public traded companies, attending conference in the sector. So you are literally living and breathing that sector that you gain so much visibility of what the future is kind of unfolding onto that's relevant. So I would for sure recommend if you still don't have any type of a relationship or access to equity research, I would encourage you to have so you can have a better visibility of your own cashflow."},
   {"type": "line", "who": "Luana", "k": "guest", "text": "And being less abstract, for example, if you're a price taker in your business and you want to kind of get a direction of where prices are going, equity research will be one of the best sources to give you that information. Or even in the sense of what's next in this sector, what technology is materializing, that will be a breakthrough."},
@@ -634,6 +657,7 @@ const MA1_SCRIPT = [
   {"type": "line", "who": "Jacob", "k": "host", "text": "and vice versa. And what role does each play in the life cycle of a company?"},
   {"type": "line", "who": "Luana", "k": "guest", "text": "Of a company, sure. That's also a great question. So on a high level, we both consider a sell side, which means we are working to provide a better investment to a third party, not ourselves. So sell side versus the buy side is an asset management who is usually making an building a portfolio to have returns from themselves. So both in that sense, they are the same sell side. An investment banker will work with companies and they can be private or public traded to help these companies in mergers and acquisitions, to help the companies to equity raises, to help the companies to do an IPO, initial public offering, if these companies are private. So that's the role of the the IB bankers and they work in a very confidential space. They work with confidential information as the company has to share a lot with these bankers. Now, an equity research works with public information, what we call material public information that a company share with us."},
   {"type": "line", "who": "Luana", "k": "guest", "text": "And with these public informations and our sensibility and our analysis of these companies, that's when we can make a recommendation. But for example, if I'm covering a company, I will never know if this company is actually looking to acquire another company, but an investment banker will have this information. And in the life cycle of a company, for private companies, usually they have more conversations with investment bankers. Investment bankers can try to help this company become public or even if it's not the goal of the company at the moment, investment bankers, given their list of contacts, it's an amazing networking that iBankers have. They can really help companies in having an equity raise. And so in this first stage of, or even if the company doesn't want to be a public company, they can have a very good relationship with iBankers. On the other side, equity research analysts, usually they have a strong relationships with public traded companies."},
+  {"type": "section", "text": "Public vs. non-public information"},
   {"type": "line", "who": "Jacob", "k": "host", "text": "Interesting. We'll kind of cover the equity researcher for a while and then we'll branch off into the corporate development, which is the second phase of your career here. So I'm very, very curious about the equity research because for me and what I do, it's just not something we're exposed to very often."},
   {"type": "line", "who": "Jacob", "k": "host", "text": "The equity analysts use public information. But for example, you said you talked to Rex Tillerson. How common is it for you to be able to access private information? Maybe this question might make you uncomfortable."},
   {"type": "line", "who": "Luana", "k": "guest", "text": "Mike, you're in trouble."},
@@ -858,6 +882,7 @@ const MA1_SCRIPT = [
   {"type": "line", "who": "Luana", "k": "guest", "text": "Thank you. Bye bye."},
   {"type": "line", "who": "Narrator", "k": "narrator", "text": "M&A Talk is brought to you by Morgan & Westfield, a nationwide leader in mergers and acquisitions for small to mid-market companies."},
 ];
+const MA_PATTERNS = [{"pat": "back up (a bit) — …","jp": "話を少し戻す「一度戻ると／少し戻していいですか」","ex": "back up again, because …","app": "Can we back up a bit? I missed your last point.","hl": "back up again"},{"pat": "What is [X] again?","jp": "聞き直し「[X]って何でしたっけ？」","ex": "What is their specialty again?","app": "What was the deadline again?","hl": "What is their specialty again"},{"pat": "So when you say [X], …?","jp": "相手の言葉を受けて掘り下げる「[X]とおっしゃると…？」","ex": "So when you say rights, what form does that come in?","app": "So when you say 'flexible,' do you mean the price?","hl": "So when you say rights"},{"pat": "Is that [X], or …?","jp": "くだけた確認「それは[X]、それとも？」","ex": "Is that a licensing type arrangement or what?","app": "Is that your best offer, or is there room?","hl": "Is that a licensing type arrangement or what"},{"pat": "depending on [X], …","jp": "「[X]によっては／[X]次第で」","ex": "depending on the country … sometimes you have rights","app": "Depending on the buyer, the terms can change.","hl": "depending on the country"},{"pat": "in a (very) short answer, …","jp": "「手短に言えば」","ex": "in a very short answer … you have mining rights","app": "In a short answer, yes — with conditions.","hl": "in a very short answer"},{"pat": "… to be able to [do]","jp": "目的「〜できるように」","ex": "mining rights … to be able to explore natural resources","app": "We phased the deal to be able to close by Q2.","hl": "to be able to explore natural resources"},{"pat": "[X] such as [examples]","jp": "例示「〜のような」","ex": "natural resources such as phosphorus","app": "core assets such as patents and real estate","hl": "such as phosphorus"},{"pat": "Tell me a little bit (more) about [X].","jp": "話題を促す「[X]について少し聞かせて」","ex": "Tell me a little bit more about your background.","app": "Tell me a little more about the timeline.","hl": "Tell me a little bit more about your background"},{"pat": "before we go into [X], …","jp": "本題前の前置き「[X]に入る前に」","ex": "before we go into that, I know you're …","app": "Before we go into pricing, let's align on scope.","hl": "before we go into that"},{"pat": "I hate to use [X], but …","jp": "決まり文句を使う前置き「[X]は使いたくないが」","ex": "I hate to use the elevator pitch, but …","app": "I hate to use a cliché, but timing is everything.","hl": "I hate to use the elevator pitch"},{"pat": "What do you typically tell people …?","jp": "「普段はどう説明していますか」","ex": "what do you typically tell people what you do …","app": "What do you typically tell clients about fees?","hl": "what do you typically tell people"},{"pat": "My main expertise is to [do].","jp": "強みを述べる「私の主な専門は〜すること」","ex": "my main expertise is to … be very accurate in forecasting","app": "My main expertise is to structure cross-border deals.","hl": "my main expertise is"},{"pat": "The essence of [X] is …","jp": "核心を述べる「[X]の本質は〜」","ex": "the essence of equity research is you are assigned a sector","app": "The essence of due diligence is verifying assumptions.","hl": "the essence of equity research is"},{"pat": "on a daily basis","jp": "「日常的に／日々」","ex": "doing this on a daily basis","app": "We review the pipeline on a daily basis.","hl": "on a daily basis"},{"pat": "It was a natural transition to [X].","jp": "「[X]への自然な流れだった」","ex": "it was a natural transition to corporate developments","app": "It was a natural transition to advisory work.","hl": "it was a natural transition to corporate developments"},{"pat": "I would say (at least) [X].","jp": "ヘッジ「おそらく／少なくとも[X]かと」","ex": "I would say at least 15 analysts were covering …","app": "I would say at least three months.","hl": "I would say at least"},{"pat": "one connects to the other","jp": "「両者はつながっている」","ex": "I think one connects to the other","app": "Risk and return — one connects to the other.","hl": "one connects to the other"},{"pat": "That's a great question.","jp": "時間を稼ぐ定番「良い質問ですね」","ex": "that's a great question","app": "That's a great question — let me think for a second.","hl": "that's a great question"},{"pat": "[X] is at least two-fold.","jp": "「[X]には少なくとも二つの面がある」","ex": "I think at least two-fold it","app": "The benefit is at least two-fold.","hl": "at least two-fold"},{"pat": "The reason being, …","jp": "理由を添える「というのも〜だから」","ex": "The reason being, imagine an equity research is 24/7 …","app": "The reason being, the market shifted overnight.","hl": "The reason being"},{"pat": "I would encourage you to [do].","jp": "勧める「〜することをお勧めします」","ex": "I would encourage you to have [that relationship]","app": "I would encourage you to get a second valuation.","hl": "I would encourage you to"},{"pat": "At a high level, …","jp": "「大まかに言うと」","ex": "At a high level, what's the difference …","app": "At a high level, it's a share deal, not an asset deal.","hl": "at a high level"},{"pat": "What role does each play in [X]?","jp": "「それぞれ[X]でどんな役割を果たすのか」","ex": "what role does each play in the life cycle of a company?","app": "What role does each team play in the launch?","hl": "what role does each play"},{"pat": "This is a topic for [X].","jp": "「これは[X]級の話題（別途語るべき）」","ex": "this is a topic for entire podcasts","app": "That's a topic for another meeting.","hl": "this is a topic for entire podcasts"},{"pat": "keep [X] in a locker","jp": "比喩「[X]を厳重に伏せておく」","ex": "keep their information pretty much in a locker","app": "They kept the numbers in a locker until closing.","hl": "in a locker"},{"pat": "get a hold of [X]","jp": "「[X]を入手する」","ex": "Once you get a hold of private information …","app": "Once you get a hold of the data room, verify it.","hl": "get a hold of private information"},{"pat": "take [X] into account","jp": "「[X]を考慮に入れる」","ex": "this is the information I should take into account","app": "We took currency risk into account.","hl": "take into account"}];
 
 // FOMC press-conference transcripts (U.S. Federal Reserve, public domain)
 const FOMC_WARSH = [
@@ -1048,6 +1073,7 @@ const MA_EP1 = {
   credit: "Host: Jacob (Morgan & Westfield) · Guest: Luana Helsinger (Itafos)",
   meta: "≈ 288 turns · interview · Host, Guest & Narrator",
   blurb: "Equity-research professional Luana Helsinger and host Jacob talk through valuation, forecasting cash flows, equity research, ESG, and building a career in M&A.",
+  patterns: (typeof MA_PATTERNS !== 'undefined') ? MA_PATTERNS : [],
   script: (typeof MA1_SCRIPT !== 'undefined') ? MA1_SCRIPT : []
 };
 
@@ -1168,10 +1194,47 @@ function openEpisode(id){
   const ep = EP_BY_ID[id];
   if(!ep) return;
   document.getElementById('readerEp').textContent = ep.epShort || '';
+  viewMode = 'read';
   renderEpisode(ep);
   showScreen('screen-reader');
   window.scrollTo(0,0);
   onScroll();
+}
+
+let viewMode = 'read';
+function renderChunks(cstr){
+  const parts = cstr.split(/\s*(‖|\|)\s*/);
+  let html='';
+  parts.forEach(p=>{
+    if(p==='‖') html+='<span class="pz pz2">‖</span>';
+    else if(p==='|') html+='<span class="pz pz1">|</span>';
+    else if(p!=='') html+='<span class="ck">'+esc(p)+'</span>';
+  });
+  return html;
+}
+function hlWrap(escText, phrases){
+  phrases.forEach(ph=>{
+    const e=esc(ph); if(!e) return;
+    const i=escText.toLowerCase().indexOf(e.toLowerCase());
+    if(i>=0) escText = escText.slice(0,i)+'<span class="hl">'+escText.slice(i,i+e.length)+'</span>'+escText.slice(i+e.length);
+  });
+  return escText;
+}
+function appendPatterns(ep){
+  const wrap=document.createElement('div'); wrap.className='patterns';
+  const intro=document.createElement('div'); intro.className='pat-intro';
+  intro.textContent='Reusable expression patterns from the first quarter — swap the [ … ] parts and reuse them in other situations.';
+  wrap.appendChild(intro);
+  (ep.patterns||[]).forEach(p=>{
+    const c=document.createElement('div'); c.className='pat';
+    c.innerHTML =
+      '<div class="pat-form">'+esc(p.pat)+'</div>'+
+      '<div class="pat-jp">'+esc(p.jp)+'</div>'+
+      '<div class="pat-line"><span class="l2">In the talk</span><span class="q">'+esc(p.ex)+'</span></div>'+
+      '<div class="pat-line"><span class="l2 l2b">Reuse</span><span class="q">'+esc(p.app)+'</span></div>';
+    wrap.appendChild(c);
+  });
+  reader.appendChild(wrap);
 }
 
 function renderEpisode(ep){
@@ -1188,14 +1251,37 @@ function renderEpisode(ep){
     (ep.credit ? '<div class="credit">'+esc(ep.credit)+'</div>' : '');
   reader.appendChild(m);
 
+  /* view-mode tabs — only for episodes that carry study data */
+  const hasStudy = (ep.patterns && ep.patterns.length) || (ep.script||[]).some(b=>b.c);
+  if(hasStudy){
+    const bar=document.createElement('div'); bar.className='viewtabs';
+    [['read','Read'],['chunks','Chunks'],['patterns','Patterns']].forEach(pair=>{
+      const b=document.createElement('button');
+      b.className='vtab'+(viewMode===pair[0]?' on':'');
+      b.textContent=pair[1];
+      b.addEventListener('click',()=>{ if(viewMode!==pair[0]){ viewMode=pair[0]; renderEpisode(ep); window.scrollTo(0,0); onScroll(); } });
+      bar.appendChild(b);
+    });
+    reader.appendChild(bar);
+  }
+
+  if(viewMode==='patterns' && ep.patterns && ep.patterns.length){
+    appendPatterns(ep);
+    sceneEls=[]; tocItems=[]; tocOpenBtn.style.display='none';
+    return;
+  }
+
+  const hlPhrases = (viewMode==='read' && ep.patterns) ? ep.patterns.map(p=>p.hl).filter(Boolean) : [];
+
   (ep.script||[]).forEach(block=>{
-    if(block.type==='scene'){
+    if(block.type==='scene' || block.type==='section'){
       sceneCount++;
       const id='scene-'+sceneCount;
+      const word = block.type==='section' ? 'Section' : 'Scene';
       const d=document.createElement('div'); d.className='scene'; d.id=id;
-      d.innerHTML='<span class="tag">Scene '+sceneCount+'</span><div class="desc">'+esc(block.text)+'</div><div class="ln"></div>';
+      d.innerHTML='<span class="tag">'+word+' '+sceneCount+'</span><div class="desc">'+esc(block.text)+'</div><div class="ln"></div>';
       reader.appendChild(d);
-      scenes.push({id,n:sceneCount,desc:block.text});
+      scenes.push({id,n:sceneCount,desc:block.text,word:word});
     }else if(block.type==='marker'){
       const d=document.createElement('div'); d.className='marker'; d.innerHTML='<span>'+esc(block.text)+'</span>';
       reader.appendChild(d);
@@ -1204,14 +1290,20 @@ function renderEpisode(ep){
       reader.appendChild(d);
     }else if(block.type==='line'){
       const d=document.createElement('div'); d.className='line k-'+(block.k||'other');
-      d.innerHTML='<span class="who">'+esc(block.who)+'</span><span class="txt">'+withParens(block.text)+'</span>';
+      let inner;
+      if(viewMode==='chunks' && block.c){
+        inner = renderChunks(block.c);
+      }else{
+        inner = hlWrap(esc(block.text), hlPhrases).replace(/\(([^)]*)\)/g,'<span class="paren">($1)</span>');
+      }
+      d.innerHTML='<span class="who">'+esc(block.who)+'</span><span class="txt">'+inner+'</span>';
       reader.appendChild(d);
     }
   });
 
   scenes.forEach(s=>{
     const b=document.createElement('button'); b.className='toc-item'; b.dataset.target=s.id;
-    b.innerHTML='<span class="n">Scene '+s.n+'</span>'+esc(s.desc);
+    b.innerHTML='<span class="n">'+s.word+' '+s.n+'</span>'+esc(s.desc);
     b.addEventListener('click',()=>{
       closeDrawer();
       const el=document.getElementById(s.id);
@@ -1222,7 +1314,7 @@ function renderEpisode(ep){
   sceneEls = scenes.map(s=>document.getElementById(s.id));
   tocItems = Array.from(tocList.children);
 
-  /* hide the Scenes button when this transcript has no scenes */
+  /* hide the Scenes button when there are no navigable headers */
   tocOpenBtn.style.display = scenes.length ? '' : 'none';
 }
 
